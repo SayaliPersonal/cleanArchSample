@@ -1,4 +1,4 @@
-package com.sayali.cleanarchsample.data.repository.movie
+package com.sayali.cleanarchsample.data.repository.movie.dataSourceInterfecase
 import com.sayali.cleanarchsample.data.model.movie.Movie
 
 //use to store & fetch data  from array

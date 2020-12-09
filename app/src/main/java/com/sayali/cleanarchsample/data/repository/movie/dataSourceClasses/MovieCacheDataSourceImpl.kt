@@ -1,6 +1,7 @@
-package com.sayali.cleanarchsample.data.repository.movie
+package com.sayali.cleanarchsample.data.repository.movie.dataSourceClasses
 
 import com.sayali.cleanarchsample.data.model.movie.Movie
+import com.sayali.cleanarchsample.data.repository.movie.dataSourceInterfecase.MovieCacheDataSource
 
 //use to store & fetch data  from array
 class MovieCacheDataSourceImpl :

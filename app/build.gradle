@@ -17,7 +17,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField "String","API_KEY","\"f60ae473c8d03fdd88e75848cea96a8e\""
-
+        buildConfigField "String","BASE_URL","\"https://api.themoviedb.org/3/\""
 
     }
 
@@ -32,7 +32,9 @@ android {
     }
 
 }
-
+kapt {
+    generateStubs = true
+}
 dependencies {
     implementation 'androidx.wear:wear:1.0.0'
     compileOnly 'com.google.android.wearable:wearable:2.5.0'

@@ -1,17 +1,14 @@
-package com.sayali.cleanarchsample.data.repository.movie
+package com.sayali.cleanarchsample.data.repository.movie.dataSourceClasses
 
-import com.sayali.cleanarchsample.data.api.TMDBService
 import com.sayali.cleanarchsample.data.model.movie.Movie
-import com.sayali.cleanarchsample.data.model.movie.MovieList
+import com.sayali.cleanarchsample.data.repository.movie.dataSourceInterfecase.MovieLocalDataSource
 import com.sayali.cleanarchsample.data.roomDB.MovieDao
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
-import retrofit2.Response
 
 //use to fetch data from Room
-class MovieLocalDataSourceImpl(private val movieDao: MovieDao):MovieLocalDataSource {
+class MovieLocalDataSourceImpl(private val movieDao: MovieDao): MovieLocalDataSource {
     override suspend fun getMoviesFromDB(): List<Movie> {
        return movieDao.getMovies()
     }
